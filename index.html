@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Market Access</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Farmers Direct Market Access</h1>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('#home')">Home</a></li>
+                <li><a href="#products" onclick="showSection('#products')">Products</a></li>
+                <li><a href="#add-product" onclick="showSection('#add-product')">Add Product</a></li>
+                <li><a href="#login" onclick="showSection('#login')">Login</a></li>
+                <li><a href="#signup" onclick="showSection('#signup')">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Farmers Direct Market Access</h2>
+            <p>Connect directly with local farmers, ensuring fair prices and fresh, quality produce for everyone.
+                Support sustainable agriculture and your local community!</p>
+            <a href="#products" class="cta-button" onclick="showSection('#products')">Explore Products</a>
+            <div class="features">
+                <div class="feature">
+                    <h3>Direct from Farmers</h3>
+                    <p>Buy fresh produce directly from local farmers, cutting out the middleman.</p>
+                </div>
+                <div class="feature">
+                    <h3>Fair Prices</h3>
+                    <p>Ensure farmers get fair prices for their produce while customers enjoy quality products.</p>
+                </div>
+                <div class="feature">
+                    <h3>Support Local</h3>
+                    <p>Strengthen your local economy and reduce food miles by buying from nearby farms.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="login" class="hidden">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            <p>Not registered? <a href="#signup" onclick="showSection('#signup')">Sign up here</a></p>
+        </section>
+
+        <section id="signup" class="hidden">
+            <h2>Signup</h2>
+            <form id="signup-form">
+                <label for="user-role">I am a:</label>
+                <select id="user-role" name="user-role" required>
+                    <option value="farmer">Farmer</option>
+                    <option value="customer">Customer</option>
+                </select>
+
+                <label for="signup-username">Username:</label>
+                <input type="text" id="signup-username" name="signup-username" required>
+
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="signup-password" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#login" onclick="showSection('#login')">Login here</a></p>
+        </section>
+
+        <section id="products" class="hidden">
+            <h2>Available Products</h2>
+            <div class="product-list">
+                <div class="product">
+                    <h3>Tomatoes</h3>
+                    <p>Price: ₹40/kg</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+                <div class="product">
+                    <h3>Potatoes</h3>
+                    <p>Price: ₹30/kg</p>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="add-product" class="hidden">
+            <h2>Add Your Product</h2>
+            <form id="product-form">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name" required>
+
+                <label for="price">Price (₹/kg):</label>
+                <input type="number" id="price" name="price" required>
+
+                <button type="submit">Add Product</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Farmers Direct Market Access</p>
+    </footer>
+
+    <script src="script.js">
+
+    </script>
+</body>
+
+</html>
